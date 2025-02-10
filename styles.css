@@ -166,5 +166,53 @@ a {
     color: #FF69B4; /* Cambia el color a rosado cuando se hace hover */
     text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3); /* Añade una sombra más marcada */
 }
+/* Estilos del botón de menú */
+#menu-toggle {
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: none;
+    padding: 10px;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 1000; /* Se mantiene por encima de todo */
+}
 
+/* Estilos para el menú en móviles */
+@media (max-width: 768px) {
+    #menu-toggle {
+        display: block;
+    }
 
+    nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh; /* Toma toda la pantalla */
+        background-color: rgba(255, 182, 193, 0.95); /* Rosado con transparencia */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: translateY(-100%);
+        transition: transform 0.3s ease-in-out;
+        z-index: 999;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    nav ul li {
+        font-size: 24px;
+    }
+
+    nav.active {
+        transform: translateY(0); /* Aparece el menú */
+    }
+}
