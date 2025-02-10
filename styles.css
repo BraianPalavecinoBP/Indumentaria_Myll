@@ -216,3 +216,41 @@ a {
         transform: translateY(0); /* Aparece el menú */
     }
 }
+/* Menú oculto por defecto */
+.nav-menu {
+    position: fixed; /* Para que cubra la pantalla */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh; /* Ocupa toda la altura */
+    background: rgba(255, 182, 193, 0.95); /* Color rosado con transparencia */
+    display: none; /* Se oculta por defecto */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 100; /* Para que quede encima de todo */
+}
+
+/* Cuando el menú está activo */
+.nav-menu.active {
+    display: flex;
+}
+
+/* Ícono de menú hamburguesa */
+.menu-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 101; /* Para que quede sobre el menú */
+}
+
+/* Estilos para los links dentro del menú */
+.nav-menu a {
+    font-size: 24px;
+    color: white;
+    text-decoration: none;
+    margin: 10px;
+    font-weight: bold;
+}

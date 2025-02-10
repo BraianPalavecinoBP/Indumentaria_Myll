@@ -13,18 +13,16 @@
 <body>
     <header>
         <img src="images/logo.jpeg" alt="Logo Indumentaria Myll" class="logo">
-        <button id="menu-toggle">☰</button>
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
 
         <h1>Indumentaria Myll</h1>
         
     </header>
-    <nav id="menu">
-        <ul>
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#catalogo">Catálogo</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-            <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
-        </ul>
+    <nav class="nav-menu">
+        <a href="#inicio">Inicio</a>
+        <a href="#catalogo">Catálogo</a>
+        <a href="#contacto">Contacto</a>
+        <a href="#sobre-nosotros">Sobre Nosotros</a>
     </nav>
     <section id="inicio">
         <h2>Bienvenidos a Indumentaria Myll</h2>
@@ -47,20 +45,7 @@
         <h2>Contacto</h2>
         <p>Envíanos un mensaje a:</p>
         <ul class="social-media">
-            <li>
-                <a href="https://wa.me/1171144602" target="_blank">
-                    <img src="images/whatsapp-logo.png" alt="WhatsApp" class="logo-contacto">
-                    <span class="nombre-contacto">Milagros</span>
-
-                </a>
-
-
-            </li>
-            <li><a href="https://wa.me/987654321" target="_blank">
-                <img src="images/whatsapp-logo.png" alt="WhatsApp" class="logo-contacto">
-                <span class="nombre-contacto">Lucrecia</span>
-             </a>
-            </li>
+           
             <li><a href="https://www.instagram.com/indumentaria_myll" target="_blank">
                 <img src="images/instagram-logo.png" alt="Instagram" class="logo-contacto">
                 <span class="nombre-contacto">Instagram</span>

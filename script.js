@@ -1,15 +1,15 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const menuToggle = document.getElementById("menu-toggle");
-    const menu = document.getElementById("menu");
-    const menuLinks = document.querySelectorAll("#menu ul li a"); // Seleccionamos los enlaces
+    const menuIcon = document.querySelector(".menu-icon"); // Selecciona el botón ☰
+    const menu = document.querySelector(".nav-menu"); // Selecciona el menú
+    const menuLinks = document.querySelectorAll(".nav-menu a"); // Selecciona los enlaces dentro del menú
 
-    // Función para alternar la visibilidad del menú
+    // Función para alternar el menú
     function toggleMenu() {
         menu.classList.toggle("active");
     }
 
     // Evento para abrir/cerrar el menú con el botón ☰
-    menuToggle.addEventListener("click", toggleMenu);
+    menuIcon.addEventListener("click", toggleMenu);
 
     // Evento para cerrar el menú al hacer clic en un enlace
     menuLinks.forEach(link => {
@@ -18,5 +18,3 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
-
-
