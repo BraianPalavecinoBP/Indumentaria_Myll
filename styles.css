@@ -25,6 +25,16 @@ header .logo {
     border-radius: 50%; /* Si deseas que el logo sea circular */
 }
 
+h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 48px; /* Ajusta el tamaño según prefieras */
+    font-weight: bold;
+    text-align: center;
+    color: #9ce3ee; /* Un rosado fuerte para destacar */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Efecto de sombra */
+}
+
+
 /* Menú de navegación */
 nav ul {
     list-style: none;
