@@ -8,6 +8,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
     <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@1.35.0/dist/umd/supabase.js"></script>
+
 
 
 </head>
@@ -33,97 +35,88 @@
     </section>
     <section id="catalogo">
         <h2>Catálogo</h2>
+        
+        <!-- Producto 1 -->
         <div class="producto">
-            <img src="product/frunce.jpeg" alt="Producto 1">
-            <p>Conjunto Frunce - $9.000
-                Talle 2
-                <p>disponible 3 colores</p>
-                
-            </p>
+            <img src="product/frunce.jpeg" alt="Producto 1" onclick="openModal('product/frunce.jpeg')">
+            <p>Conjunto Frunce - $9.000<br>Talle 2</p>
+            <p>Disponible en 3 colores</p>
+            <input type="number" id="cantidad1" value="1" min="1" style="width: 50px;">
+        <button onclick="addToCart('1', 'frunce', document.getElementById('cantidad1').value)">Agregar al Carrito</button>
         </div>
+    
+        <!-- Producto 2 -->
         <div class="producto">
-            <img src="product/shortcargo.jpeg" alt="Producto 2">
-            <p>Short Cargo - $15.000 -
-                Talle 40
-            </p>
+            <img src="product/shortcargo.jpeg" alt="Producto 2" onclick="openModal('product/shortcargo.jpeg')">
+            <p>Short Cargo - $15.000 - Talle 40</p>
         </div>
+    
+        <!-- Producto 3 -->
         <div class="producto">
-            <img src="product/remera.jpeg" alt="Producto 1">
-            <p>Remeras Basicas - $5.000
-                
-                <p>disponible 3 colores</p>
-                
-            </p>
+            <img src="product/remera.jpeg" alt="Producto 3" onclick="openModal('product/remera.jpeg')">
+            <p>Remeras Básicas - $5.000</p>
+            <p>Disponible en 3 colores</p>
         </div>
+    
+        <!-- Producto 4 -->
         <div class="producto">
-            <img src="product/shortmom.jpeg" alt="Producto 1">
-            <p>Short MOM - $14.000
-                Talles 38 y 40
-                
-                
-            </p>
+            <img src="product/shortmom.jpeg" alt="Producto 4" onclick="openModal('product/shortmom.jpeg')">
+            <p>Short MOM - $14.000 - Talles 38 y 40</p>
         </div>
+    
+        <!-- Producto 5 -->
         <div class="producto">
-            <img src="product/conjuntoadidas.jpeg" alt="Producto 1">
-            <p>Conjunto Adidas - $14.000
-                Talle 3
-                
-                
-            </p>
+            <img src="product/conjuntoadidas.jpeg" alt="Producto 5" onclick="openModal('product/conjuntoadidas.jpeg')">
+            <p>Conjunto Adidas - $14.000 - Talle 3</p>
         </div>
+    
+        <!-- Producto 6 -->
         <div class="producto">
-            <img src="product/pollerajeans.jpeg" alt="Producto 1">
-            <p>Pollera de Jeans - $10.000
-                Talle 38(elastizada)
-                
-                
-            </p>
+            <img src="product/pollerajeans.jpeg" alt="Producto 6" onclick="openModal('product/pollerajeans.jpeg')">
+            <p>Pollera de Jeans - $10.000 - Talle 38 (Elastizada)</p>
         </div>
+    
+        <!-- Producto 7 -->
         <div class="producto">
-            <img src="product/muculosaflores.jpeg" alt="Producto 1">
-            <p>Musculosa de florecitas - $3.000
-                Talle unico(tela elastizada)
-                
-                
-            </p>
+            <img src="product/muculosaflores.jpeg" alt="Producto 7" onclick="openModal('product/muculosaflores.jpeg')">
+            <p>Musculosa de Florecitas - $3.000 - Talle único (Tela Elastizada)</p>
         </div>
+    
+        <!-- Producto 8 -->
         <div class="producto">
-            <img src="product/musculosalove.jpeg" alt="Producto 1">
-            <p>Musculosa - $3.000 -
-                Talle unico
-                
-                
-            </p>
+            <img src="product/musculosalove.jpeg" alt="Producto 8" onclick="openModal('product/musculosalove.jpeg')">
+            <p>Musculosa - $3.000 - Talle único</p>
         </div>
+    
+        <!-- Producto 9 -->
         <div class="producto">
-            <img src="product/toprojo.jpeg" alt="Producto 1">
-            <p>Top Rojo - $4.000
-                Talle unico
-                
-                
-            </p>
+            <img src="product/toprojo.jpeg" alt="Producto 9" onclick="openModal('product/toprojo.jpeg')">
+            <p>Top Rojo - $4.000 - Talle único</p>
         </div>
+    
+        <!-- Producto 10 -->
         <div class="producto">
-            <img src="product/remeraabertura.jpeg" alt="Producto 1">
-            <p>Remera con abertura - $3.000
-                Talle unico
-                
-                
-            </p>
+            <img src="product/remeraabertura.jpeg" alt="Producto 10" onclick="openModal('product/remeraabertura.jpeg')">
+            <p>Remera con Abertura - $3.000 - Talle único</p>
         </div>
+    
+        <!-- Producto 11 -->
         <div class="producto">
-            <img src="product/topblancoshortgris.jpeg" alt="Producto 1">
-            <p>Conjunto Top y Short - $18.000
-                Top blanco talle unico /
-                Short gris talle 36
-                <p>se puede por separado
-                    top $8.000 /
-                    Short $10.000
-                </p>
-                
-            </p>
+            <img src="product/topblancoshortgris.jpeg" alt="Producto 11" onclick="openModal('product/topblancoshortgris.jpeg')">
+            <div>
+                <p>Conjunto Top y Short - $18.000</p>
+            <p>Top blanco Talle único / Short gris Talle 36</p>
+            <p>Se puede comprar por separado: Top $8.000 / Short $10.000</p>
+            </div>
         </div>
+        
+    
     </section>
+    <div id="modal" class="modal" onclick="closeModal()">
+        <span class="close" onclick="closeModal()">×</span>
+        <img id="modal-image" class="modal-content" />
+    </div>
+    
     <section id="contacto">
         <h2>Contacto</h2>
         <p>Envíanos un mensaje a:</p>
@@ -159,5 +152,44 @@
     <footer>
         <p>&copy; 2025 Indumentaria Myll - Todos los derechos reservados.</p>
     </footer>
+    <!-- Modal para ver imágenes en grande -->
+    <section id="registro">
+        <h2>Registro</h2>
+        <input type="email" id="email" placeholder="Correo" required>
+        <input type="password" id="password" placeholder="Contraseña" required>
+        <button onclick="registerUser()">Registrarse</button>
+        <input type="email" id="email" placeholder="Correo">
+<input type="password" id="password" placeholder="Contraseña">
+<button onclick="registerUser()">Registrar</button>
+
+<script>
+async function registerUser() {
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+
+    const response = await fetch('http://localhost:4000/api/auth/register', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email, password }),
+    });
+
+    const data = await response.json();
+
+    if (response.ok) {
+        alert('Registro exitoso: ' + data.user.email);
+    } else {
+        alert('Error al registrarse: ' + data.error);
+    }
+}
+</script>
+
+    </section>
+    
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@1.35.0/dist/umd/supabase.js"></script>
+
+
+
 </body>
 </html>
